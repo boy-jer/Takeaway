@@ -1,0 +1,4 @@
+<h1>Menus</h1>
+<% @menus.each do |menu| %>
+	<li><%= link_to menu.name, edit_menu_path(menu) %></li>
+<% end %>

@@ -1,0 +1,26 @@
+<%= form_tag sign_in_customers_path do %>
+	<%= display_order_field? %>
+	<%= raise order_in_process?.inspect %>
+	<div class="field">
+		<div class="field_label">
+			<%= label_tag "Email address" %>
+		</div>
+		<div class="field_input">
+			<%= text_field_tag 'sign_in[email]' %>
+		</div>
+	</div>
+	<div class="field">
+		<div class="field_label">
+		<%= label_tag "Password" %>
+		</div>
+		<div class="field_input">
+		<%= password_field_tag 'sign_in[password]' %>
+		</div>
+	</div>
+	<div class="submit_button confirm" id="sign_in_submit">
+		<%= submit_tag "Sign in" %>
+		<%= link_to 'Forgotten password?', nil, :id => "forgotten_password_link" %>	
+	</div>
+	<div>
+	</div>
+<% end %>

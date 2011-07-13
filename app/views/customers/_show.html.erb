@@ -1,0 +1,18 @@
+Your order will be delivered to <span class="user_data"><%= @customer.name %></span> (<span class="user_data"><%= @customer.phone_number %></span>) at the following address:
+<div class="user_data">
+	<div>
+		<%= @customer.address.address1 %>
+	</div>
+	<div>
+		<%= @customer.address.address2 %>
+	</div>
+	<div>
+		<%= @customer.address.town_city %>
+	</div>
+	<div>
+		<%= @customer.address.postcode %>
+	</div>
+</div>
+<div>
+<%= link_to 'Edit', edit_customer_order_path(@order), :class => "edit_button" %>	
+</div>

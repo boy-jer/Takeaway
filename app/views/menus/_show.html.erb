@@ -1,0 +1,7 @@
+<h2>These are the items that we'll deliver...</h2>
+<% @order.items.each do |item| %>
+<div>
+<%= item.display_name %>
+</div>			
+<% end %>
+<%= link_to 'Edit', edit_menu_orders_path %>	

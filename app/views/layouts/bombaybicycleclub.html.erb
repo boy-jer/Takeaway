@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bombay Bicycle Club</title>
+  <%= stylesheet_link_tag :all %>
+  <%= csrf_meta_tag %>
+	<%= javascript_include_tag 'jquery.min', 'jquery_ujs' %>
+	<%= yield :head %>
+</head>
+<body>
+	<div id="session_data">
+	Schedule status <%= session[:schedule_status] %> :
+	Customer status <%= session[:customer_status] %> :		
+	Items status<%= session[:items_status] %> :	
+	<%= link_to 'Sign out', sign_out_path, :remote => true %>
+	<%= link_to 'New order', new_order_path %>
+
+	</div>
+	
+	<div id="wrapper">		
+		<% flash.each do |key, value| %> 
+		<div class="flash <%= key %>"><%= value %></div>
+		<% end %>
+		
+		<%= yield %>
+	</div>
+</body>
+</html>

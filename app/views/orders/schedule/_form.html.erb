@@ -1,0 +1,9 @@
+<%= form_tag update_schedule_orders_path do %>
+		Your order will be 
+		<%= select_tag 'order[delivery_type]', options_for_select(["collected", "delivered"]) %>
+		at
+		<%= select_tag 'order[delivery_time]', options_for_select([["19:30", "19:30"], ["20:00", "20:00"], ["20:30", "20:30"], ["21:00", "21:00"]]) %>
+	<div class="submit_button confirm confirm_schedule">
+		<%= submit_tag 'Confirm' %>
+	</div>
+<% end %>

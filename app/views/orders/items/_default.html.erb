@@ -1,0 +1,8 @@
+These are the items that we'll deliver...
+<% @order.items.each do |item| %>
+<div>
+<%= item.display_name %>
+</div>			
+<% end %>
+<%#= link_to 'Edit', :controller => 'orders', :action => 'edit_items', :state => 'open' %>
+<%= link_to 'Edit', edit_items_order_path(@order), :class => "edit_button" %>	

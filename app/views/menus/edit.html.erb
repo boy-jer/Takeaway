@@ -1,0 +1,5 @@
+<%= content_for :head do %>
+	<%= javascript_tag "menu = #{@menu_json}" %>
+	<%= javascript_include_tag 'gwt/menuadmin/menuadmin.nocache.js' %>
+<% end %>
+<div id="menuAdmin"></div>

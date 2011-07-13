@@ -1,0 +1,15 @@
+<%= content_for :head do %>
+	<%= javascript_tag "menus_json = #{@menus_json}" %>
+	<%= javascript_tag "items_json = #{@items_json}" %>
+<% end %>
+<%= order_section('schedule') do %>
+<%= display_schedule %>
+<% end %>
+
+<%= order_section('customer') do %>
+<%= display_customer %>
+<% end %>
+
+<%= order_section('items') do %>
+<%= display_items %>
+<% end %>

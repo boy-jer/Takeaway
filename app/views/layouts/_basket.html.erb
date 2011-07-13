@@ -1,0 +1,43 @@
+<script>
+$(document).ready(function () {  
+  var top = $('#basket').offset().top - parseFloat($('#basket').css('margin-top').replace(/auto/, 0));
+  $(window).scroll(function (event) {
+    // what the y position of the scroll is
+    var y = $(this).scrollTop();
+  
+    // whether that's below the form
+    if (y >= top) {
+      // if so, ad the fixed class
+      $('#basket').addClass('fixed');
+    } else {
+      // otherwise remove it
+      $('#basket').removeClass('fixed');
+    }
+  });
+});
+</script>
+
+<%#= form_for @order, :remote => true do %>
+<!--
+
+<table>
+	<%# @order.items.each_with_index do |item, index| %>
+	<tr>
+		<td><%#= item.display_name %></td>			
+		<td class="price"><%#= display_price(item.total) %></td>
+		<td><%#= submit_tag 'Remove', :name => "remove_item[#{index}]" %></td>
+	</tr>
+	<%# end %>
+	<tr class="summary">
+		<td>Total</td>
+		<td class="price"><%#= display_price(@order.total) %></td>
+	</tr>
+</table>
+-->
+<%# end %>
+
+The total price will be 
+<div class="user_data">
+<%= display_price(@order.total) %>
+</div>
+<%= link_to "I'm finished", {:controller => 'orders', :action => 'edit_items', :state => 'closed'}, :class => 'confirm', :id => 'confirm_items' %>

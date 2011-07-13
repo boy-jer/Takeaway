@@ -1,0 +1,9 @@
+<div id="customer_sign_in">
+	Have you booked with us before?
+	<div>
+	<%= link_to "I'm a new customer", load_new_customer_form_customers_path, :remote => true, :class => 'confirm new_customer_button' %>
+	</div>
+	<div>
+	<%= link_to "I've booked before", load_signin_form_customers_path, :remote => true, :class => 'confirm customer_signin_button' %>
+	</div>
+</div>

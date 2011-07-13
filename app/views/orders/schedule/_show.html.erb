@@ -1,0 +1,4 @@
+Your order will be <span class="user_data"><%= @order.delivery_type %></span> at <span class="user_data"><%= @order.delivery_time %></span>
+<div class="submit_button">
+<%= link_to 'Edit', edit_schedule_order_path(@order), :class => "edit_button" %>	
+</div>

@@ -1,0 +1,15 @@
+<h1><%= @menu.name %></h1>
+	<% @menu.dishes.each do |dish| %>
+		<%= hidden_field_tag 'menu_id', @menu.menu_id %>
+		<div class="dish">
+			<div class="dish_name">
+			<%= dish.name %>
+			</div>
+			<div class="dish_description">
+			<%= dish.description %>
+			</div>
+			<div class="dish_price">
+			<%= dish.price_points.first.price %>
+			</div>
+		</div>
+	<% end %>

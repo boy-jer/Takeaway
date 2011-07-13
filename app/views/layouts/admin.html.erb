@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin</title>
+  <%= stylesheet_link_tag 'admin' %>
+  <%= csrf_meta_tag %>
+	<%= yield :head %>
+</head>
+<body>
+	<div id="background">
+		<div id="background_header">
+		</div>
+		<div id="background_menu">
+		</div>
+		<div id="background_content">
+		</div>
+	</div>	
+	<div id="wrapper">		
+		<div id="header">
+			<h1>Admin</h1>
+		</div>
+		<% flash.each do |key, value| %> 
+		<div class="flash <%= key %>"><%= value %></div>
+		<% end %>
+		
+		<%= yield %>
+	</div>
+</body>
+</html>

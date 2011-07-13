@@ -1,0 +1,23 @@
+<%= form_for @order, :remote => true do %>
+	<% @menus.each do |menu| %>
+	<h1><%= menu.name %></h1>
+		<% menu.dishes.each do |dish| %>
+			<%= hidden_field_tag 'menu_id', menu.menu_id %>
+			<%= display_dish(@order, dish) do %>
+				<div class="dish_submit">
+				<%= add_dish_button(@order, dish) %>
+				<%= remove_dish_button(@order, dish) %>
+				</div>
+				<div class="dish_price">
+				<%= display_price(dish.price_points.first.price) %>
+				</div>
+				<div class="dish_name">
+				<%= dish.name %>
+				</div>
+				<div class="dish_description">
+				<%= dish.description %>
+				</div>
+			<% end %>
+		<% end %>
+	<% end %>
+<% end %>
