@@ -18,6 +18,9 @@
 	<div id="wrapper">		
 		<div id="header">
 			<h1>Admin</h1>
+			<div id="top_nav">
+				<%= render 'layouts/admin_nav' %>
+			</div>
 		</div>
 		<% flash.each do |key, value| %> 
 		<div class="flash <%= key %>"><%= value %></div>

@@ -33,7 +33,7 @@ class MenusController < ApplicationController
   end
   
   def pages_layout
-    request[:action] == 'edit' ? 'admin' : choose_layout
+    request[:action] == 'edit' || request[:action] == 'index' ? 'admin' : choose_layout
   end
   
 end

@@ -50,6 +50,11 @@ input[type=text], input[type=password], textarea {
 	font-family: Arial;	
 }
 
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
 
 #wrapper {
 	margin: auto;
@@ -58,6 +63,56 @@ input[type=text], input[type=password], textarea {
 
 #header {
 	height: 120px;
+}
+
+#top_nav {
+	margin-top: 37px;
+	height: 40px;
+	color: #fff;
+}
+
+#top_nav a {
+	display: block;
+	float: left;
+	margin-right: 5px;
+	padding: 10px 15px 5px 15px;
+}
+
+#top_nav a.selected {
+	background-color: #CECECE;
+	color: #003366;
+	border: 1px solid #fff;
+	border-bottom: 1px #CECECE;
+	-moz-border-radius-topright: 5px;	
+	-moz-border-radius-topleft: 5px;	
+	-webkit-border-top-right-radius: 5px;
+	-webkit-border-top-left-radius: 5px;
+	z-index: -1;
+}
+
+/*
+***************************************
+Menus Index
+***************************************
+*/
+
+.menu {
+	background-color: #fff;
+	border: 1px solid #E0E0E0;
+	padding: 20px 25px;
+	width: 880px;
+	margin-bottom: 10px;	
+}
+
+.menu_controls {
+	float: right;
+	margin-left: 20px;
+	width: 120px;
+	text-align: right;
+}
+
+.menu_edit_button {
+	float: left;
 }
 
 /*
@@ -137,7 +192,7 @@ Menus
 	margin-top: 10px;
 }
 
-.editButton button, .deleteButton button, .closeDishButton button {
+.editButton button, .deleteButton button, .closeDishButton button, .menu_edit_button a, .menu_delete_button a {
 		padding: 5px 10px 3px 10px;
 		color: #000;
 		border: 1px solid #ccc;
